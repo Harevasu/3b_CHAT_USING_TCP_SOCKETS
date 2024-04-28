@@ -31,7 +31,6 @@ def start_server():
     print("Server started, listening on port 5555")
     while True:
         client_socket, addr = server_socket.accept()
-
         print(f"Accepted connection from {addr}")
 ```
 ```
