@@ -24,8 +24,6 @@ def handle_client(client_socket):
         except:
             break
     client_socket.close()
-```
-```
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind(('127.0.0.1', 5555))
@@ -33,6 +31,8 @@ def start_server():
     print("Server started, listening on port 5555")
     while True:
         client_socket, addr = server_socket.accept()
+```
+```
         print(f"Accepted connection from {addr}")
         client_handler = threading.Thread(target=handle_client, args=(client_socket,))
         client_handler.start()
