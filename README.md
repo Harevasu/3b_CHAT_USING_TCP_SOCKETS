@@ -32,8 +32,6 @@ def start_server():
     while True:
         client_socket, addr = server_socket.accept()
         print(f"Accepted connection from {addr}")
-```
-```
         client_handler = threading.Thread(target=handle_client, args=(client_socket,))
         client_handler.start()
 start_server()
